@@ -1,5 +1,6 @@
 package com.small.spring.beans.context;
 
+import com.small.spring.beans.factory.AbstractBeanFactory;
 import com.small.spring.beans.factory.BeanFactory;
 
 /**
@@ -10,5 +11,7 @@ import com.small.spring.beans.factory.BeanFactory;
  * @Version 1.0
  **/
 public interface ApplicationContext extends BeanFactory {
-
+    void setParent (ApplicationContext parent);
+    ApplicationContext getParent();
+    AbstractBeanFactory getBeanFactory();
 }

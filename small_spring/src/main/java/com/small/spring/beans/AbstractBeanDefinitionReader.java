@@ -1,6 +1,6 @@
 package com.small.spring.beans;
 
-import com.small.spring.beans.io.ResourceLoader;
+import com.small.spring.io.ResourceLoader;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,6 +17,16 @@ public abstract class AbstractBeanDefinitionReader implements BeanDefinitionRead
     private Map<String,BeanDefinition> registry;
 
     private ResourceLoader resourceLoader;
+
+    private String packageName;
+
+    public String getPackageName() {
+        return packageName;
+    }
+
+    public void setPackageName(String packageName) {
+        this.packageName = packageName;
+    }
 
     protected AbstractBeanDefinitionReader(ResourceLoader resourceLoader) {
         this.registry = new HashMap<String, BeanDefinition>();

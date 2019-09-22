@@ -17,6 +17,11 @@ public class BeanDefinition {
 
     private PropertyValues propertyValues = new PropertyValues();
 
+    private ConstructorArgument constructorArgument = new ConstructorArgument();
+
+    private boolean isSingleton;
+
+
     public BeanDefinition() {
     }
 
@@ -57,4 +62,19 @@ public class BeanDefinition {
         this.propertyValues = propertyValues;
     }
 
+    public ConstructorArgument getConstructorArgument() {
+        return constructorArgument;
+    }
+
+    public void setConstructorArgument(ConstructorArgument constructorArgument) {
+        this.constructorArgument = constructorArgument;
+    }
+
+    public boolean isSingleton() {
+        return isSingleton;
+    }
+
+    public void setSingleton(boolean singleton) {
+        isSingleton = singleton;
+    }
 }

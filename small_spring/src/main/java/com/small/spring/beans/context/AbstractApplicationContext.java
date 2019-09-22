@@ -20,13 +20,25 @@ import java.util.Map;
  * @Version 1.0
  **/
 public abstract class AbstractApplicationContext implements ApplicationContext {
+
     protected AbstractBeanFactory beanFactory;
+
+    private ApplicationContext parent;
+
+    public ApplicationContext getParent() {
+        return parent;
+    }
+
+    public void setParent(ApplicationContext parent) {
+        this.parent = parent;
+    }
 
     public AbstractApplicationContext(AbstractBeanFactory beanFactory) {
         this.beanFactory = beanFactory;
     }
 
     public void refresh() throws Exception {
+        beanFactory.setContext(this);
         loadBeanDefinitions(beanFactory);
         registerBeanPostProcessors(beanFactory);
 
