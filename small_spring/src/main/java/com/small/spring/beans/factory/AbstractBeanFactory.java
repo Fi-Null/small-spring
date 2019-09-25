@@ -31,10 +31,21 @@ public abstract class AbstractBeanFactory implements BeanFactory {
     //存放已经构造完整的实现了BeanPostProcessor的实例
     private List<BeanPostProcessor> beanPostProcessors = new ArrayList<BeanPostProcessor>();
 
+    /*** 通过三级缓存彻底解决了单例setter注入下的循环依赖 ***/
+    /** 当执行完方法beanFactory.preInstantiateSingletons()后，thirdCache保存了所有空构造实例及名称，
+     * secondCache保存了所有可能需要重新设置ref的实例及名称，first保存了所有最终生成的实例和名称。在firstcache与third
+     * 中，必然存放了所有的bean，在second中只存放因循环依赖所以创建时ref了不完整对象的那些。在创建了所有实例后，
+     * 通过checkoutAll方法对secondCache中的实例进行重置依赖。
+     **/
 
-    protected Map<String, Object> secondCache = new HashMap();
-    protected Map<String, Object> thirdCache = new HashMap<>();
+    //firstCache用于保存所有最终被生成的实例.
     protected Map<String, Object> firstCache = new HashMap<>();
+    //a ref b, b ref a情况下，在b创建时，a还只是空构造实例，
+    // 因此用secondCache保存所有field中指向空实例的那些实例，即保存b。
+    protected Map<String, Object> secondCache = new HashMap();
+    //thirdCache是当空构造函数创建一个实例时，就放入其中。
+    protected Map<String, Object> thirdCache = new HashMap<>();
+
 
     protected ConverterFactory converterFactory = new ConverterFactory();
     protected AbstractApplicationContext context;
@@ -94,7 +105,7 @@ public abstract class AbstractBeanFactory implements BeanFactory {
             bean = beanPostProcessor.postProcessAfterInitialization(bean, name);
         }
 
-        //空构造实例如果被AOP成代理实例，则放入三级缓存，说明已经构建完毕
+        //空构造实例如果被AOP成代理实例，则放入一级缓存，说明已经构建完毕
         if (thirdCache.containsKey(name)) {
             firstCache.put(name, bean);
         }
