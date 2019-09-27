@@ -1,7 +1,6 @@
 package com.small.spring;
 
 import com.small.spring.beans.annotation.AutoWired;
-import com.small.spring.beans.annotation.Value;
 
 /**
  * @ClassName School
@@ -34,7 +33,6 @@ public class School {
     }
 
 
-
     public Student getStudent() {
         return student;
     }
@@ -42,7 +40,6 @@ public class School {
 //    public void setStudent(Student student) {
 //        this.student = student;
 //    }
-
 
 
 }
