@@ -17,7 +17,9 @@ public class AnnotationTest {
 
     @Test
     public void testAnnotation() throws Exception {
-        //1.在xml中配置实例及属性2.在类中用@Autowired注解标注依赖的bean3.依赖和被依赖的实例都要在xml中配置
+        // 1.在xml中配置实例及属性
+        // 2.在类中用@Autowired注解标注依赖的bean
+        // 3.依赖和被依赖的实例都要在xml中配置
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("annotation.xml");
         School school = (School) applicationContext.getBean("school");
         Student student = (Student) applicationContext.getBean("student");

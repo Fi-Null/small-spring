@@ -11,7 +11,9 @@ import com.small.spring.beans.factory.BeanFactory;
  * @Version 1.0
  **/
 public interface ApplicationContext extends BeanFactory {
-    void setParent (ApplicationContext parent);
+    void setParent(ApplicationContext parent);
+
     ApplicationContext getParent();
+
     AbstractBeanFactory getBeanFactory();
 }

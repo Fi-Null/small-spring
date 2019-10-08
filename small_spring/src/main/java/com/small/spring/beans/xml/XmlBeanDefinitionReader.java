@@ -24,6 +24,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
         super(resourceLoader);
     }
 
+    @Override
     public void loadBeanDefinitions(String location) throws Exception {
         InputStream inputStream = getResourceLoader().getResource(location).getInputStream();
         doLoadBeanDefinitions(inputStream);

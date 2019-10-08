@@ -25,10 +25,12 @@ public abstract class AbstractApplicationContext implements ApplicationContext {
 
     private ApplicationContext parent;
 
+    @Override
     public ApplicationContext getParent() {
         return parent;
     }
 
+    @Override
     public void setParent(ApplicationContext parent) {
         this.parent = parent;
     }

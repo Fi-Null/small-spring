@@ -119,7 +119,7 @@ public class AnnotationParser {
                 classNames.addAll(getClassNameFromDir(childFile.getPath(), packageName + "." + childFile.getName(), isRecursion));
             } else {
                 String fileName = childFile.getName();
-                if (fileName.endsWith(".class") && fileName.contains("$")) {
+                if (fileName.endsWith(".class") && !fileName.contains("$")) {
                     classNames.add(packageName + "." + fileName.replace(".class", ""));
                 }
             }

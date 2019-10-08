@@ -66,8 +66,7 @@ public class AutowireCapableBeanFactory extends AbstractBeanFactory {
                 Field field = bean.getClass().getDeclaredField(propertyValue.getName());
                 if (field.getType().toString().equals("class java.lang.String")) {
                     convertedValue = value;
-                }
-                else {
+                } else {
                     convertedValue = this.converterFactory.getConverterMap()
                             .get(field.getType())
                             .parse((String) value);

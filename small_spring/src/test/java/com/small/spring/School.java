@@ -1,6 +1,7 @@
 package com.small.spring;
 
 import com.small.spring.beans.annotation.AutoWired;
+import com.small.spring.beans.annotation.Service;
 import com.small.spring.beans.annotation.Value;
 
 /**
@@ -10,11 +11,16 @@ import com.small.spring.beans.annotation.Value;
  * @Date 2019/9/24 23:19
  * @Version 1.0
  **/
+@Service
 public class School {
 
     @AutoWired
     private Student student;
+
+    @Value("njust")
     private String name;
+
+    @Value("11711001")
     private int price;
 
     public int getPrice() {
@@ -34,15 +40,12 @@ public class School {
     }
 
 
-
     public Student getStudent() {
         return student;
     }
-//
-//    public void setStudent(Student student) {
-//        this.student = student;
-//    }
 
-
+    public void setStudent(Student student) {
+        this.student = student;
+    }
 
 }
