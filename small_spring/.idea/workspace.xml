@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db5ddbf3-9bea-433b-bf4e-33efc5c063f0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -718,7 +717,7 @@
       <workItem from="1568815430604" duration="19187000" />
       <workItem from="1569167245034" duration="74000" />
       <workItem from="1569336478690" duration="8946000" />
-      <workItem from="1569973004278" duration="2121000" />
+      <workItem from="1569973004278" duration="2146000" />
     </task>
     <task id="LOCAL-00001" summary="ioc">
       <created>1569167305781</created>
@@ -762,7 +761,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570540054846</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge branch 'master' of https://github.com/Fi-Null/small-spring&#10;&#10;# Conflicts:&#10;#&#9;small_spring/small-spring.iml">
+      <created>1570540087767</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570540087767</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -798,7 +804,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30328000" />
+    <option name="totallyTimeSpent" value="30353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
