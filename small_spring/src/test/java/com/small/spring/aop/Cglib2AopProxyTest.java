@@ -15,6 +15,8 @@ import org.junit.Test;
  */
 public class Cglib2AopProxyTest {
 
+
+    // 只有在开启全局Cglib2AopProxy时，该case才能运行成功
     @Test
     public void testCglib() throws Exception {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("aop.xml");

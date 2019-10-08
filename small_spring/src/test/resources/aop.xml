@@ -20,11 +20,14 @@
         <property name="expression" value="execution(* com.small.spring..*.*(..))"></property>
     </bean>
 
-    <bean id="loggerInterceptor" class="com.small.spring.aop.LoggerInterceptor"></bean>
+
+    <!-- 目前只支持定义一种拦截器，同时使用2种不支持  -->
+   <!-- <bean id="loggerInterceptor" class="com.small.spring.aop.LoggerInterceptor"></bean>
 
     <bean id="aspectjAspect2" class="com.small.spring.aop.AspectJExpressionPointcutAdvisor">
         <property name="advice" ref="loggerInterceptor"></property>
         <property name="expression" value="execution(* com.small.spring..*.*(..))"></property>
-    </bean>
+    </bean>-->
+
 
 </beans>
