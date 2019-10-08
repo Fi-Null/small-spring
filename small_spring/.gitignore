@@ -173,5 +173,3 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-/o2o-lsp-web/src/main/webapp/web/node_modules
-/o2o-lsp-web/src/main/webapp/web/dist
