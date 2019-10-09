@@ -93,7 +93,6 @@ public abstract class AbstractApplicationContext implements ApplicationContext {
                     declaredMethod.invoke((realClassInvokeBean.getClass().cast(invokeBean)), (realClassRefBean.getClass().cast(exceptedValue)));
                 } catch (NoSuchMethodException e) {
                     Field declaredField = realClassInvokeBean.getClass().getDeclaredField(propertyValue.getName());
-                    System.out.println(declaredField);
                     declaredField.setAccessible(true);
                     declaredField.set((realClassInvokeBean.getClass().cast(invokeBean)), (realClassRefBean.getClass().cast(exceptedValue)));
                 }

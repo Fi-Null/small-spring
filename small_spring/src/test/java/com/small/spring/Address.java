@@ -26,7 +26,6 @@ public class Address implements Liveable {
     public String toString() {
         return "Address{" +
                 "local='" + local + '\'' +
-                ", car=" + car +
                 '}';
     }
 

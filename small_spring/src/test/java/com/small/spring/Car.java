@@ -34,7 +34,6 @@ public class Car implements Driveable {
         return "Car{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
-                ", address=" + address +
                 '}';
     }
 
