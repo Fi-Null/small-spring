@@ -38,7 +38,7 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must end with two \r
- Icon
+Icon
 
 
 # Thumbnails
@@ -63,7 +63,7 @@ Temporary Items
 *.pydevproject
 .metadata
 .gradle
-bin/
+#bin/
 tmp/
 *.tmp
 *.bak
